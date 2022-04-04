@@ -1,0 +1,14 @@
+//计算阶乘
+int main()
+{
+    int i = 0;
+    int n = 0;
+    int ret = 1;
+    scanf_s("%d", &n); //100
+    for (i = 1;i <= 10; i++)
+    {
+        ret = ret * i;
+    }
+    printf("ret=%d\n", ret);
+    return 0;
+}
