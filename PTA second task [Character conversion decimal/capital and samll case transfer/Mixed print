@@ -1,0 +1,79 @@
+ // Second C language task
+ 
+#include<stdio.h>
+//int main()
+//{
+//    char c;
+//    scanf_s("%c", &c);
+//    printf_s("%c,%d", c, c);
+//    return 0;
+//}
+
+
+
+//
+//#include <stdio.h>
+//int main()
+//{
+//	char a;
+//	scanf_s("%c", &a);
+//	printf("此字符=%c，对应的十进制数=%d\n", a,a);
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	char a;
+//	printf("请输入一个大写或小写字母>;");
+//	scanf_s("%c", &a);
+//	if (a <= 91)
+//	{
+//		a += 32;
+//		printf("该字母的小写形式为：%c\n", a);
+//
+//	}
+//	else
+//	{
+//		a -= 32;
+//		printf("该字母的大写形式为：%c\n", a);
+//	}
+//	return 0;
+//}
+ 
+
+//
+//int main()
+//{
+//	int d;
+//	char c;
+//	float f1,f2;
+//	scanf_s"%f%d%c%f", &f1, &d, &c, &f2);
+//	printf("%c%d%f%%f", c, d, f1, f2);
+//	return 0;
+//}
+
+
+//#include <stdio.h>
+//int main()
+//{
+//   char c;
+//    int x;
+//  //double f1, f2;
+//    float f1,f2;
+//    scanf_s("%lf%d%c%lf", &f1, &x, &c, &f2);
+//    printf("%c %d %.2f %.2f", c, x, f1, f2);
+//    return 0;
+//}
+
+
+//# include <stdio.h>
+//int main()
+//{
+//    double f1, f2;
+//    int i;
+//    char c;
+//    scanf_s("%f%d%c%f", &f1, &i, &c, &f2);
+//    printf("%c%d%.2f%.2f", c, i, f1, f2);
+//    return 0;
+//}
