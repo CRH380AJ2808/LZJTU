@@ -1,0 +1,75 @@
+//猜数字游戏
+//1.电脑会生成一个随机数
+//2.猜数字 循环猜
+
+#include<stdlib.h>
+#include<time.h>
+void menu()
+{
+    printf("欢迎来到猜数字游戏\n");
+    printf("操作说明\n");
+    printf("输入1-开始\n输入0结束游戏\n");
+    printf("*************************\n");
+    printf("****   1.play  0.exit  **\n");
+    printf("*************************\n");
+}
+//RAND_MAX   0-32767之间
+void game()
+{
+    //1.生成一个随机数
+    int ret = 0;
+    int guess = 0;
+    //拿时间戳来设置随机数的生成起始点
+    //time_t time(time_t*timer)   本质上是长整形
+    
+    //时间戳
+    //当前计算机的时间-计算机的起始时间（1970.1.1.0：0：0：0）
+    //单位 S秒
+    ret=rand()%100+1;//生成1-100之间的随机数
+   
+    //printf("%d\n",ret);
+    //2.猜数字
+    while (1)
+    {
+        printf("请猜数字:>");
+        scanf_s("%d", &guess);
+        if (guess > ret)
+        {
+            printf("猜大了\n");
+        }
+        else if (guess < ret)
+        {
+            printf("猜小了");
+        }
+        else
+        {
+            printf("恭喜你！！！！\n");
+            printf("猜对了！！！！\n");
+        }
+    }
+}
+int main()
+{
+    int input = 0;
+    srand((unsigned int)time(NULL));
+    do
+    {
+
+        menu();
+        printf("请选择>:");
+        scanf_s("%d", &input);
+        switch (input)
+        {
+        case 1:
+                game();//猜数字游戏
+                break;
+        case 0:
+                printf("退出游戏\n");
+                break;
+        default:
+            printf("选择错误 若继续玩游戏请按1 结束请按0\n");
+                break;
+        }
+    } while (input);
+    return 0;
+}
