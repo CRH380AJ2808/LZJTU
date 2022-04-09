@@ -1,0 +1,74 @@
+////函数
+// 
+//int Add(int x, int y)      //(int x, int y)---函数参数
+//{
+//    int z=0;
+//    z = x + y;           //------语句项-函数体-函数的实现
+//    return z;       
+//}
+//int main()
+//{
+//    int a = 10;
+//    int b = 20;
+//    int sum = Add(a, b);
+//    printf("%d\n", sum);
+//    return 0;
+//}
+ 
+ 
+//IO函数   input output
+//字符串操作函数  strlen
+//字符操作函数
+//内存操作函数
+//时间、日期操作函数 time
+//数学函数           sqrt
+//其他库函数
+#include<string.h>
+//int main()
+//{
+//    char arr1[] = "bit";//  后边还有\0----"b i t \0"
+//    char arr2[20] = "##########";
+//    //               bit\0#######----\0--字符串的结束标志
+//    strcpy_s(arr2, arr1);
+//    printf("%s\n", arr2);
+//    //strcpy - string copy-字符串拷贝 
+//    //strlen - string length --字符串求长度
+//    return 0;
+//}
+
+
+////memset
+////memory(记忆）计算机翻译为 - 内存 set -设置
+//
+//int main()
+//{
+//    char arr[] = "hello world";
+//    memset(arr,'*',5);
+//    printf("%s\n", arr);
+//    return 0;
+//}
+
+
+//自定义函数 -函数名-返回类型-参数
+//函数的组成
+
+//写一个函数 找出两个数的较大值
+
+//定义函数
+int/*该函数返回整形这样的一个值*/ get_max(int x, int y)
+{
+    if (x > y)
+        return x;
+    else
+        return y;
+}
+
+int main()
+{
+    int a = 10;
+    int b = 20;
+    //函数的使用
+    int max = get_max(a,b);
+    printf("max=%d\n", max);
+    return 0;
+}
