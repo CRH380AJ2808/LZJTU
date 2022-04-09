@@ -1,0 +1,230 @@
+////课后习题练习P[80]
+////3-1.计算国民生产总值增长百分点
+//#include<stdio.h>
+//#include<math.h>
+//int main()
+//{
+//    float p, r, n;
+//    r = 0.07;
+//    n = 10;
+//    p = pow(1 + r, n);//p=(1+r)^n 等价
+//    printf("p=%f\n", p);
+//    return 0;
+//}
+
+////3-2.存款利息的计算
+//#include<stdio.h>
+//#include <math.h>
+//int main()
+//{
+//    float r5, r3, r2, r1, r0, p, p1, p2, p3, p4, p5;
+//    p = 1000;
+//    r5 = 0.03;
+//    r3 = 0.0275;
+//    r2 = 0.021;
+//    r1 = 0.015;
+//    r0 = 0.0035;
+//
+//    p1 = p * ((1 + r5) * 5);               // 一次存5年期  
+//    p2 = p * (1 + 2 * r2) * (1 + 3 * r3);  // 先存2年期，到期后将本息再存3年期  
+//    p3 = p * (1 + 3 * r3) * (1 + 2 * r2);  // 先存3年期，到期后将本息再存2年期  
+//    p4 = p * pow(1 + r1, 5);               // 存1年期，到期后将本息存再存1年期，连续存5次  
+//    p5 = p * pow(1 + r0 / 4, 4 * 5);       // 存活期存款。活期利息每一季度结算一次  
+//    printf("p1=%f\n", p1);                 // 输出按第1方案得到的本息和  
+//    printf("p2=%f\n", p2);                 // 输出按第2方案得到的本息和  
+//    printf("p3=%f\n", p3);                 // 输出按第3方案得到的本息和  
+//    printf("p4=%f\n", p4);                 // 输出按第4方案得到的本息和  
+//    printf("p5=%f\n", p5);                 // 输出按第5方案得到的本息和  
+//    return 0;
+//}
+
+//#include<math.h>
+//int main()
+//{
+//    int p = 1000;//本金
+//    int n = 5;//存款年限
+//    float r1 = 0.015, r2 = 0.021, r3 = 0.0275, r5 = 0.03, r0 = 0.0035;
+//        float P1 = p * (1 + n * r5);//一次存五年
+//        float P2 = p * (1 + 2 * r2) * (1 + 3 * r3);
+//        float P3 = p * (1 + 3 * r3) * (1 + 2 * r2);
+//        float P4 = p * pow(1 + r1, n);     //存一年 连续存五次
+//        float P5 = p * pow(1 + r0/4, 4*n); //存5年活期
+//        printf("一次存5年本金利息和=%.2f\n",P1);
+//        printf("先存2年再存3年本金利息和=%.2f\n", P2);
+//        printf("先存3年再存2年本金利息和=%.2f\n", P3);
+//        printf("存一年 连续存五年本金利息和=%.2f\n", P4);
+//        printf("存五年活期本金利息=%.2f\n", P5);
+//}
+
+
+////3-3.求多少月还清贷款
+//#include<math.h>
+//int main()
+//{
+//    int d = 300000, p = 6000;
+//    float r = 0.01;
+//    float m = log(p / (p - d * r)) / log(1 + r);
+//    //float m = (log(p) - log(p - d * r)) / log(l + r);
+//    printf("m=%.lf\n", m);
+//    return 0;
+//}
+
+//3-4.分析程序
+//int main()
+//{
+//    //char---的范围-128~127
+//    char c1, c2;
+//        c1 = 197;  //ascii  //197-256=-59
+//              
+//        c2 = 198;  //198-256=-58
+//        printf("c1=%c\n c2=%c\n", c1, c2);//a,b      //?,?
+//        printf("c1=%d\n c2=%d\n", c1, c2);//97,98    //-59,-58
+//        return 0;
+//}
+
+//int main()
+//{
+//    int c1, c2;
+//    c1 = 197;  //ascii  //197-256=-59
+//
+//    c2 = 198;  //198-256=-58
+//    printf("c1=%c\nc2=%c\n", c1, c2);  //?,?
+//    printf("c1=%d\nc2=%d\n", c1, c2);  //197,198
+//    return 0;
+//}
+
+
+
+////4-5.数据的混合输入
+////sacnf_s 使a=3,b=7,x=8.5,y=71.82,c1= 'A',c2='a'
+//
+////a=3b=7 8.5 7.182e+1Aa
+//int main()
+//{
+//    int a, b;
+//    float x, y;
+//    char c1, c2;
+//    scanf_s("a=%db=%d", &a, &b);
+//    scanf_s("%f%e", &a, &y);
+//    scanf_s("%c%c", &c1, &c2);
+//    return 0;
+//}
+
+
+////4-6.译码
+//int main()
+//{
+//    //char c[]="Chain";
+//    char c1='C', c2='h', c3='i', c4='n', c5='a';//China
+//    //编码翻译
+//    c1 += 4;//c1 = c1 + 4; //C---G
+//    c2 += 4;//c2 = c2 + 4;
+//    c3 += 4;//c3 = c3 + 4;
+//    c4 += 4;//c4 = c4 + 4;
+//    c5 += 4;//c5 = c5 + 4;
+//
+//    printf("使用putchar函数输出:>");
+//    putchar(c1);
+//    putchar(c2);
+//    putchar(c3);
+//    putchar(c4);
+//    putchar(c5);
+//
+//    printf("\n使用printf函数输出:>");
+//    printf("% c % c % c % c % c", c1, c2, c3, c4, c5);
+//    return 0;//
+//}
+
+
+////3-7.求圆的周长、圆面积、圆球表面积、圆球体积、圆柱体积
+////r=1.5   h=3   用scanf_s输入
+//int main()
+//{   
+//    float pi = 3.14;
+//    float r,h;
+//    printf("请输入半径和高度:>\n");
+//    scanf_s("%f%f", &r, &h);
+//
+//    //圆周长
+//    float Circumference = 2 * pi * r;
+//    printf("圆的周长:>%.2f\n", Circumference);
+//    //圆面积
+//    float CircleArea = pi * r * r;
+//    printf("圆面积:>%.2f\n", CircleArea);
+//    //圆球表面积
+//    float Surface_area_of_sphere = 4 * pi * r * r;
+//    printf("圆球表面积:>%.2f\n", Surface_area_of_sphere);
+//    //圆球体积
+//    float SphereVolume = 4 / 3 * pi * r * r * r;
+//    printf("圆球体积:>%.2f\n", SphereVolume);
+//    //圆柱体积
+//    float CylinderVolume = pi * r * r * h;
+//    printf("圆柱体积:>%.2f\n", CylinderVolume);
+//        return 0;
+//}
+
+
+////3-7.求圆的周长、圆面积、圆球表面积、圆球体积、圆柱体积
+////r=1.5   h=3   用scanf_s输入
+//int main()
+//{
+//    double pi = 3.14;
+//    double r,h;
+//    printf("请输入半径和高度:>\n");
+//    scanf_s("%f%f", &r, &h);
+//
+//    //圆周长
+//    double Circumference = 2 * pi * r;
+//    printf("圆的周长:>%.2f\n", Circumference);
+//    //圆面积
+//    double CircleArea = pi * r * r;
+//    printf("圆面积:>%.2f\n", CircleArea);
+//    //圆球表面积
+//    double Surface_area_of_sphere = 4 * pi * r * r;
+//    printf("圆球表面积:>%.2f\n", Surface_area_of_sphere);
+//    //圆球体积
+//    double SphereVolume = 4 / 3 * pi * r * r * r;
+//    printf("圆球体积:>%.2f\n", SphereVolume);
+//    //圆柱体积
+//    double CylinderVolume = pi * r * r * h;
+//    printf("圆柱体积:>%.2f\n", CylinderVolume);
+//    return 0;
+//}
+
+
+
+
+
+////3.8getchar函数 读入c1和c2  用putchar和printf输出
+//int main()
+//{
+//    //char c1, c2;   //-128~127范围
+//    int c1, c2;     //键盘上的字符范围在char之间  //>127用整形
+//    c1 = getchar();
+//    c2 = getchar();
+//
+//    printf("使用putchar函数输出:>");
+//    putchar(c1);
+//    putchar(c2);
+//    printf("\n");//也可以采用printf函数 换行
+//
+//    printf("使用printf函数输出:>");
+//    printf("%c%c\n", c1, c2);
+//    return 0;
+//}
+//
+//int main()
+//{
+//    //char c1='A', c2='X';
+//    char c1 = 165;
+//    char c2 = 188;
+//
+//    printf("使用putchar函数输出:>");
+//    putchar(c1);
+//    putchar(c2);
+//    printf("\n");//也可以采用printf函数 换行
+//
+//    printf("使用printf函数输出:>");
+//    printf("%d\n%d", c1, c2);
+//    return 0;
+//}
