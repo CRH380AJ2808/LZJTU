@@ -1,0 +1,388 @@
+
+//课后习题[4-1]
+//1.算数运算：就是通常所见的四则运算
+//操作：加减乘除、自增、自减、取模
+//优先级：++、--；*、/、%；+、-
+
+//int main()
+//{
+//    printf("%d\n", 6+12%5*3-2);
+//    return 0;
+//}
+
+//2.关系运算：在C语言中关系运算通常被认为是比较运算
+//运算符：>、<、>=、<=、==、!=
+//优先级：>、<、>=、<=；==、!=
+
+//逻辑运算：与或非
+//运算符：&& || ！
+
+//int main()
+//{
+//    int English = 79;
+//    int Chinese = 85;
+//    int math = 96;
+//    if (English > 80 || Chinese + math > 180)
+//        printf("可以吃一个鸡腿\n");
+//    else
+//        printf("小明的成绩不达标\n");
+//    return 0;
+//}
+
+
+////[4-4]a b c 三个整数输出最大
+//int main()
+//{
+//    int max = 0;
+//    int a = 0;
+//    int b = 0;
+//    int c = 0;
+//    scanf_s("%d", &a);
+//    scanf_s("%d", &b);
+//    scanf_s("%d", &c);
+//    if (a > b && b > c)
+//        max = a;
+//    if (b > c && c > a)
+//        max = b;
+//    if (c > a && a > b)
+//        max = c;
+//    printf("%d\n", max);
+//    return 0;
+//}
+
+//int main()
+//{
+//    int a;
+//    int b;
+//    int c;
+//    printf("请输入三个整数，使用空格隔开：");
+//    scanf_s("%d %d %d", &a &b &c);
+//    int max;
+//    if (a > b)
+//    {
+//        max = a;
+//    }
+//    else
+//    {
+//        max = b;
+//    }
+//    if (max < c)
+//    {
+//        max = c;
+//    }
+//    printf("最大的数字：%d\n",max);
+//    return 0;
+//}
+
+////4-5 输入1000一下的整数  输出sqrt
+//#include<math.h>
+//int main()
+//{
+//    double num = 0;
+//    double b = 0;
+//    printf("请输入一个小于1000的整数:\n");
+//    scanf_s("%d", &num);
+//    if (num<0||num >= 1000)
+//    {
+//        printf("输入不符合要求 重新输入整数：\n");
+//        scanf_s("%d\n", &num);
+//    }
+//    printf("%.0lf\n", sqrt(num));
+//    return 0;
+//}
+
+
+////4-6输x值 求出对应的y值
+//int main()
+//{
+//    int x;
+//    int y;
+//    printf("请输入一个数字：");
+//    scanf_s("%d", &x);
+//    if (x < 1)
+//    {
+//        y = x;
+//     }
+//    else if 
+//        (x < 10 && x >= 1)
+//    {
+//        y = 2 * x - 1;
+//    }
+//        else if
+//        (x >= 10)
+//    {
+//        y = 3 * x - 11;
+//    }
+//    printf("%d\n", y);
+//    return 0;
+//}
+
+////4-7（1）  判断是否满足题目要求
+//int main()
+//{
+//    int x, y;
+//    printf("enter X:\n");
+//    scanf_s("%d", &x);
+//    y = -1;
+//    if (x != 0)
+//    {
+//        if (x > 0)
+//            y = 1;
+//        else
+//            y = 0;
+//    }
+//    printf("%d\n", y);
+//    return 0;
+//}//不满足题目要求
+
+////4-7（2）
+//int main()
+//{
+//    int x, y;
+//    printf("enter x:\n");
+//    scanf_s("%d", &x);
+//    y = 0;
+//    if (x >= 0)
+//    {
+//        if (x > 0)
+//            y = 1;
+//        else y = -1;
+//    }
+//    printf("x=%d y=%d\n", x, y);
+//    return 0;
+//}
+
+
+//////4-8 给出一百分制成绩 输出成绩等级ABCDE 
+//int main()
+//{
+//    int num;
+//    printf("请输入成绩：");
+//    scanf_s("%d", &num);
+//    if (num > 60)
+//    {
+//        printf("成绩等级为：D");
+//        {
+//            if (num > 70)
+//                printf("成绩等级为：C");
+//            {
+//                if(num>80)
+//                    printf("成绩等级为：B");
+//                {
+//                    if(num>90)
+//                        printf("成绩等级为：A");
+//                }
+//            }
+//        }
+//    }
+//    else 
+//        printf("成绩等级为：E");
+//    return 0;
+//}  //错了 需要修改
+
+//int main()
+//{
+//    float score;
+//    char result;
+//    printf("请输入成绩:");
+//    scanf_s("%f", &score);
+//    if (score >= 90)
+//    {
+//        result = 'A';
+//    }
+//    else if (score >= 80 && score < 90)
+//    {
+//        result = 'B';
+//    }
+//    else if (score >= 70 && score < 80)
+//    {
+//        result = 'C';
+//    }
+//    else if (score >= 60 && score < 70)
+//        result = 'D';
+//    else
+//        result = 'E';
+//    printf("你的成绩评级为:%c\n", result);
+//    return 0;
+//}
+
+////4-9 给出不多于5位的数字
+////求出 位数 分别输出每一位 按逆序输出各位数字
+//int main()
+//{
+//    int num;
+//    printf("请输入一个不大于5位数的正整数：");
+//    scanf_s("%d", &num);
+//    if (num < 0 || num>99999)
+//    {
+//        printf("输入的数据不符合规则！\n");
+//        return -1;//表示程序错误退出了
+//    }
+//    if (num >= 10000)
+//    {
+//        printf("这个数据是5位数！\n");
+//    }
+//    else if (num >= 1000 && num < 10000)
+//    {
+//        printf("这个数据是4位数！\n");
+//    }
+//    else if (num >= 100 && num < 1000)
+//    {
+//        printf("这个数据是3位数！\n");
+//    }
+//    else if (num >= 10 && num < 100)
+//        printf("这个数据是2位数！\n");
+//    else
+//    {
+//        printf("这个数据是1位数！\n");
+//    }
+//    return 0;
+//}
+
+
+////4-10奖金发放
+//int main()
+//{
+//    double salary1 = 100000 * 0.1;//10w的奖金
+//    double salary2 = salary1 + 100000 * 0.075;//20w的奖金
+//    double salary3 = salary2 + 200000 * 0.050;
+//    double salary4 = salary3 + 200000 * 0.030;
+//    double salary5 = salary4 + 400000 * 0.015;
+//    
+//    double I, salary;
+//    printf("输入你创造的利润:");
+//    scanf_s("%lf", &I);
+//
+//    if (I <= 100000)
+//    {
+//        salary = I * 0.1;
+//    }
+//    else if (I > 100000 && I <= 200000)
+//    {
+//        salary = salary1 + (I-100000) * 0.075;
+//    }
+//    else if (I > 200000 && I <= 400000)
+//    {
+//        salary = salary2 + (I-200000) * 0.050;
+//    }
+//    else if (I > 400000 && I <= 600000)
+//    {
+//        salary = salary3 + (I - 200000) * 0.030;
+//    }
+//    else if (I > 600000 && I <= 1000000)
+//    {
+//        salary = salary4 + (I - 400000) * 0.015;
+//    }
+//    else
+//    {
+//        salary = salary5 + (I - 1000000) * 0.001;
+//    }
+//    printf("你应得的奖金：%.2f", salary);
+//    return 0;
+//}
+
+//int main()
+//{
+//    double salary1 = 100000 * 0.1;//10w的奖金
+//    double salary2 = salary1 + 100000 * 0.075;//20w的奖金
+//    double salary3 = salary2 + 200000 * 0.050;
+//    double salary4 = salary3 + 200000 * 0.030;
+//    double salary5 = salary4 + 400000 * 0.015;
+//    
+//    double I, salary;
+//    printf("输入你创造的利润:");
+//    scanf_s("%lf", &I);
+//    int level = I / 100000;
+//    switch (level)
+//    {
+//    case0:
+//        salary = I * 0.01;
+//        break;
+//    case1:
+//        salary = salary1 + (I - 100000) * 0.075;
+//        break;
+//    case2:
+//        salary = salary2 + (I - 200000) * 0.050;
+//        break;
+//    case3:
+//        salary = salary3 + (I - 200000) * 0.030;
+//        break;
+//    case4:
+//        salary = salary4 + (I - 400000) * 0.015;
+//        break;
+//    default:
+//        salary = salary5 + (I - 1000000) * 0.001;
+//        break;
+//    }
+//    printf("你应得的奖金:%.2f\n", salary);
+//    return 0;
+//}
+
+
+////4-11
+////输入四个整数 并由小到大输出
+////a中总是放置最大的数
+//int main()
+//{
+//    int a, b, c, d,tmp;
+//    printf("请输入四个整数：");
+//    scanf_s("%d%d%d%d", &a, &b, &c, &d);
+//
+//    //找出最大的数放到a中
+//    if (a < b)
+//            tmp = a;
+//            a = b;
+//            b = tmp;
+//    if (a < c)
+//            tmp = a;
+//            a = c;
+//            c = tmp;
+//        if (a < d)
+//            tmp = a;
+//            a = d;
+//            d = tmp;
+//
+//        //在剩下的三个数中找到最大的放在b中
+//        if (b < c)
+//            tmp = b;
+//            b = c;
+//            c = tmp;
+//        if (b < d)
+//            tmp = b;
+//            b = d;
+//            d = tmp;
+//
+//        //在剩下的两个数中找到最大的数放到c中
+//        if (c < d)
+//            tmp = c;
+//            c = d;
+//            d = tmp;
+//
+// 
+//    printf("%d%d%d%d", a, b, c, d);
+//    return 0;
+//}
+
+
+////求圆塔高度
+//#include<math.h>
+//
+//int main()
+//{
+//    int x, y;
+//    printf("请输入x和y两个坐标值："); 
+//    scanf_s("%f%f", &x, &y);
+//
+//    float fx = fabs(x);
+//    float fy = fabs(y);
+//
+//    float lx = fabs(fx - 2);
+//    float ly = fabs(fy - 2);
+//
+//    float len = ((lx * lx + ly * ly));
+//    if (len > 1)
+//        printf("输入位置的建筑物高度为0\n");
+//    else
+//        printf("输入位置的建筑物高度为10\n");
+//    return 0;
+//}
