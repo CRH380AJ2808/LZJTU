@@ -1,0 +1,172 @@
+
+//作业一 两整数的加法
+#include<stdio.h>
+int main( )
+{
+	int x,y,sum;
+	scanf("%d%d",&x,&y);
+	sum=x+y;
+	printf("%d",sum);
+	return 0;
+}
+
+
+//第三章测试题
+//输入输出字符 
+#include <stdio.h>
+int main()
+{
+	char a;
+	scanf("%c", &a);
+	printf("%c,%d\n", a,a);
+	return 0;
+}
+
+//大小写转换 
+# include <stdio.h>
+int main()
+{
+	char a;
+	scanf("%c", &a);
+	if (a < 91)
+	{
+		a =a+ 32;
+		printf("%c\n", a);
+
+	}
+	else
+	{
+		a =a- 32;
+		printf("%c\n", a);
+	}
+	return 0;
+}
+
+
+//混合类型数据格式化输入 
+//顺序读入浮点数1、整数、字符、浮点数2，再按照字符、整数、浮点数1、浮点数2的顺序输出。
+# include <stdio.h>
+int main(void) {
+    float f1, f2;
+    int i;
+    char c;
+    scanf("%f %d %c %f", &f1, &i, &c, &f2);
+    printf("%c %d %.2f %.2f", c, i, f1, f2);
+    
+    return 0;
+}
+
+
+
+
+
+
+
+////【PTA作业题4】  第四章作业题-------2022.04.13
+////if-else编程练习 用if-else语句实现输入一个整数判断其与5的关系
+////按照余数为0-4，分别输出代表土，水，火，木，金，五行数字
+//
+//int main()
+//{
+//    int z = 0;
+//    printf("输入一个整数");
+//    scanf_s("%d", &z);
+//    if (z < 0)
+//    {
+//        printf("输入错误,");
+//        printf("%d", z);
+//        printf("不能代表五行");
+//    }
+//    else if ((z % 5) == 0)
+//    {
+//        printf("%d", z);
+//        printf("代表土");
+//    }
+//    else if ((z % 5) == 1)
+//    {
+//        printf("%d", z);
+//        printf("代表水");
+//    }
+//    else if ((z % 5) == 2)
+//    {
+//        printf("%d", z);
+//        printf("代表火");
+//    }
+//    else if ((z % 5) == 3)
+//    {
+//        printf("%d", z);
+//        printf("代表木");
+//    }
+//    else if ((z % 5) == 4)
+//    {
+//        printf("%d", z);
+//        printf("代表金");
+//    }
+//    return 0;
+//}
+
+
+
+//int main()
+//{
+//    int z = 0;
+//    int x = 0;
+//    scanf_s("%d", &z);
+//    if (z <= 0)
+//    {
+//        printf("输入错误,");
+//        printf("%d", z);
+//        printf("不能代表五行");
+//        return 0;
+//    }
+//    else 
+//        x = z / 5;
+//        z = z % 5;
+//       
+//    switch (z)
+//    {
+//    case 0:
+//            {   
+//                z = 5 * x + z;
+//                printf("%d", z);
+//                printf("代表土");
+//                break;
+//            }
+//    case 1:
+//            {  
+//                z = 5 * x + z;
+//                printf("%d", z);
+//                printf("代表水");
+//                break;
+//            }
+//    case 2:
+//            {
+//       
+//                z = 5 * x + z;
+//                printf("%d", z);
+//                printf("代表火");
+//                break;
+//            }
+//    case 3:
+//            {
+//       
+//                z = 5 * x + z;
+//                printf("%d", z);
+//                printf("代表木");
+//                break;
+//            }
+//    case 4:
+//            {
+//        
+//                z = 5 * x + z;
+//                printf("%d", z%5);
+//                printf("代表金");
+//                break;
+//            }
+//
+//        }
+//
+//        return 0;
+//}
+
+
