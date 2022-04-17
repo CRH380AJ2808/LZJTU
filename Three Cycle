@@ -1,0 +1,114 @@
+
+//while 循环
+//while 表达式是顶部驱动（top-driven）的循环：先计算循环条件（也就是控制表达式）。
+  //如果为 true，就执行循环体，然后再次计算控制表达式。
+  //如果控制表达式为 false，程序跳过循环体，而去执行循环体后面的语句。
+
+/* 从键盘输入数字，然后输出它们的平均值
+* -------------------------------------- */
+//#include <stdio.h>
+//int main()
+//{
+//    double x = 0.0, sum = 0.0;
+//    int count = 0;
+//    printf("\t--- Calculate Averages ---\n");
+//    printf("\nEnter some numbers:\n"
+//        "(Type a letter to end your input)\n");
+//    while (scanf_s("%lf", &x) == 1)
+//    {
+//        sum += x;
+//        ++count;
+//    }
+//    if (count == 0)
+//        printf("No input data!\n");
+//    else
+//        printf("The average of your numbers is %.2f\n", sum / count);
+//    return 0;
+//}
+
+
+
+
+
+//for 循环
+//和 while 一样，for 循环也是一个顶部驱动的循环
+/*(1) 表达式 1：初始化
+只计算一次。在计算控制表达式之前，先计算一次表达式 1，
+ 以进行必要的初始化，后面不再计算它。
+
+(2) 表达式 2：控制表达式
+每轮循环前都要计算控制表达式，以判断是否需要继续本轮循环。
+当控制表达式的结果为 false，结束循环。
+
+(3) 表达式 3：调节器
+调节器（例如计数器自增）在每轮循环结束后且表达式 2 计算前执行。
+即，在运行了调节器后，执行表达式 2，以进行判断。*/
+//int main()
+//{
+//#define ARR_LENGTH 1000
+///* ... */
+//long arr[ARR_LENGTH];
+//int i;
+//for (i = 0; i < ARR_LENGTH; ++i)
+//    arr[i] = 2 * i;
+//}
+
+//int main( )
+//{
+//    i = 0;                             // 初始化计数器
+//    while (i < ARR_LENGTH)     // 循环条件
+//    {
+//        arr[i] = 2 * i;
+//        ++i;                        // 递增计数器
+//    }
+//}
+//
+
+
+
+
+/*do...while 循环
+do...while 循环是一种底部驱动的循环：
+do 语句 while (表达式);
+在控制表达式被第一次计算之前，循环体语句会首先被执行一次。
+与 while 和 for 循环不同，do...while 循环会确保循环体语句至少执行一次
+如果控制表达式的值为 true，那么另一次循环就会继续；如果是 false，则循环结束
+
+// 读入和执行所选的菜单命令
+// --------------------------------------------
+int getCommand( void );
+void performCommand( int cmd );
+#define END 0
+/* ... */
+//int main()
+//{
+//	do
+//	{
+//		int command = getCommand();   // 询问菜单系统
+//		performCommand(command);    // 执行所选的菜单命令
+//	} while (command != END);
+//}
+
+
+// 将字符串2复制到字符串1
+// ----------------------------
+//char* strcpy(char* restrict s1, const char* restrict s2)
+//{
+//    int i = 0;
+//    do
+//        s1[i] = s2[i];               // 循环体：复制每一个字符
+//    while (s2[i++] != '\0');      // 如果刚刚复制的是'\0'，则结束循环
+//    return s1;
+//}
+
+
+
+
+//     没写完
+//从自然数中取3个数进行组合之循环算法
+//用循环算法找出 5 个自然数中取 3 个数的组合
+
+
+
+
+
